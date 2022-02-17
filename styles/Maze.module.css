@@ -1,0 +1,1050 @@
+.maze {
+  display: inline-grid;
+  width: 110%;
+  height: 212px;
+  float: left;
+  margin-left: -5%;
+  border: 1px solid black;
+  grid-template-columns: repeat(60, 1fr);
+  background-color: var(--secondary-100);
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 30px;
+}
+
+.mazeComponent {
+  box-sizing: border-box;
+  height: 7px;
+  width: 100%;
+  background-color: var(--secondary-100);
+  font-size: small;
+}
+
+/* .mazeButton {
+  display: inline-flex;
+  align-items: center;
+  float: left;
+  justify-content: space-around;
+  background-color: var(--green-1);
+  border: none;
+  white-space: nowrap;
+  border-radius: 6px;
+  font-size: 100%;
+  margin-right: 2%;
+  margin-top: 30px;
+  height: 40px;
+  width: 120px;
+  padding: 1%;
+  padding-top: 1%;
+} */
+.mazeButton {
+  background-color: var(--green-1);
+  border: none;
+  border-radius: 6px;
+  font-size: 100%;
+  height: 40px;
+  width: 120px;
+  padding: 1%;
+  padding-top: 1%;
+}
+
+.mazeButton:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  color: black;
+}
+
+/* .mazeButton:first-of-type {
+  margin-left: -5%;
+} */
+
+/* .solveButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  background-color: var(--secondary-400);
+  border-radius: 6px;
+  margin-left: -0.5%;
+  margin-top: 30px;
+  font-size: 100%;
+  width: 120px;
+  height: 40px;
+  float: left;
+  padding: 1%;
+} */
+.solveButton {
+  border: none;
+  background-color: var(--secondary-400);
+  border-radius: 6px;
+  font-size: 100%;
+  width: 120px;
+  height: 40px;
+  padding: 1%;
+  margin-left: 10px;
+}
+
+.solveButton:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  color: black;
+}
+
+.btnContainer {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  /* background-color: white; */
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MazeButton:hover {
+  background-image: url(https://i.imgur.com/Dn6LmcP.png);
+  /* background-color: var(--secondary-100);
+  border: 1px solid var(--secondary-400); */
+  font-size: 0;
+  object-fit: contain;
+}
+
+/* .mazeTutorial {
+  font-size: small;
+  background-color: white;
+  border-radius: 8px;
+  line-height: 1.5;
+  margin-top: 20px;
+  clear: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 10%;
+  padding: 10px;
+  width: 80%;
+} */
+.mazeTutorial {
+  font-size: small;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  line-height: 1.5;
+  clear: left;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  padding: 10px;
+  width: 80%;
+}
+
+.tutorialColor {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  font-size: small;
+}
+
+.mazeLegend {
+  list-style-type: none;
+  border-radius: 6px 6px 0 0;
+  padding: 10px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  background-color: white;
+  width: 80%;
+}
+
+.textContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.legendText {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 400px) {
+  .maze {
+    display: inline-grid;
+    width: 110%;
+    height: 212px;
+    float: left;
+    margin-left: -5%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 30px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 7px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton:first-of-type{
+    margin-left: 8%;
+  } */
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+    justify-content: space-around;
+    border-radius: 6px;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 30px;
+    height: 40px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+
+  .mazeButton {
+    border-radius: 6px;
+    font-size: 100%;
+    height: 40px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: -5%;
+  } */
+
+  /* .mazeButton:hover {
+    border: 1px solid var(--primary-600);
+    background-color: var(--secondary-100);
+  } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 30px;
+    font-size: 80%;
+    width: 120px;
+    height: 40px;
+    float: left;
+    padding: 1%;
+  } */
+
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    height: 40px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+    border: 1px solid var(--secondary-400);
+    background-color: var(--secondary-100);
+  } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+    border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    background-color: white;
+    border-radius: 8px;
+    line-height: 1.5;
+    margin-top: 350px;
+    clear: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 10%;
+    padding: 10px;
+    width: 80%;
+  } */
+  .mazeTutorial {
+    font-size: small;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+    line-height: 1.5;
+    margin-top: 0px;
+    clear: left;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .tutorialColor {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    font-size: small;
+  }
+
+  .textContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .maze {
+    display: inline-grid;
+    width: 100%;
+    height: 362px;
+    float: left;
+    margin-left: 1%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 30px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 12px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton {
+    display: inline-flex;
+    float: left;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 10px;
+    margin-top: 20px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 1%;
+  } */
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+        border: 1px solid var(--secondary-400);
+        background-color: var(--secondary-100);
+      } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+        border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    margin-top: 450px;
+    clear: left;
+    margin-left: 16%;
+    width: 65%;
+  } */
+  .mazeTutorial {
+    font-size: small;
+    margin-top: 0px;
+    clear: left;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 850px) {
+  .maze {
+    display: inline-grid;
+    width: 100%;
+    height: 362px;
+    float: left;
+    margin-left: 1%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 30px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 12px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton:first-of-type{
+        margin-left: 8%;
+      } */
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 10px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  .mazeButton:first-of-type {
+    margin-left: 1%;
+  }
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+        border: 1px solid var(--secondary-400);
+        background-color: var(--secondary-100);
+      } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+        border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    margin-top: 280px;
+    clear: left;
+    margin-left: 15%;
+    width: 70%;
+  } */
+  .mazeTutorial {
+    font-size: small;
+    margin-top: 0px;
+    clear: left;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .maze {
+    display: inline-grid;
+    width: 90%;
+    height: 452px;
+    float: left;
+    margin-left: 5%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 0px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 15px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton:first-of-type{
+        margin-left: 8%;
+      } */
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 10px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    white-space: nowrap;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 5%;
+  } */
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+        border: 1px solid var(--secondary-400);
+        background-color: var(--secondary-100);
+      } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+        border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    margin-top: 280px;
+    clear: left;
+    margin-left: 15%;
+    width: 70%;
+  } */
+  .mazeTutorial {
+    font-size: small;
+    clear: left;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .maze {
+    display: inline-grid;
+    width: 80%;
+    height: 510px;
+    float: left;
+    margin-left: 10%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 0px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 17px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 0px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 10%;
+    margin-top: 10px;
+  } */
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+        border: 1px solid var(--secondary-400);
+        background-color: var(--secondary-100);
+      } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+        border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    margin-top: 500px;
+    clear: left;
+    margin-left: 10%;
+    width: 70%;
+  } */
+  .mazeTutorial {
+    font-size: small;
+    clear: left;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1397px) {
+  .maze {
+    display: inline-grid;
+    width: 80%;
+    height: 510px;
+    float: left;
+    margin-left: 10%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 0px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 17px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton:first-of-type{
+      margin-left: 8%;
+    } */
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 0px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 0.5%;
+    margin-top: -20px;
+  } */
+
+  /* .mazeButton:hover {
+      border: 1px solid var(--primary-600);
+      background-color: var(--secondary-100);
+    } */
+
+  /* .solveButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+      border: 1px solid var(--secondary-400);
+      background-color: var(--secondary-100);
+    } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+      border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    margin-top: 500px;
+    clear: left;
+    margin-left: 10%;
+    width: 70%;
+  } */
+  .mazeTutorial {
+    font-size: medium;
+    clear: left;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .maze {
+    display: inline-grid;
+    width: 70%;
+    height: 662px;
+    float: left;
+    margin-left: 15%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 0px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 22px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    float: left;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 0px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 0.5%;
+    margin-top: -20px;
+  } */
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    margin-left: 0.5%;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .solveButton:hover {
+        border: 1px solid var(--secondary-400);
+        background-color: var(--secondary-100);
+      } */
+
+  .MazeButton:hover {
+    background-image: url(https://i.imgur.com/Dn6LmcP.png);
+    /* background-color: var(--secondary-100);
+        border: 1px solid var(--secondary-400); */
+    font-size: 0;
+    object-fit: contain;
+  }
+
+  /* .mazeTutorial {
+    font-size: small;
+    max-width: 50%;
+    margin-top: 650px;
+    clear: left;
+    margin-left: 15%;
+    width: 65%;
+  } */
+  .mazeTutorial {
+    font-size: medium;
+    clear: left;
+    width: 70%;
+  }
+
+  .textContainer {
+    margin-left: 15%;
+  }
+
+  .mazeLegend {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1910px) {
+  .maze {
+    display: inline-grid;
+    width: 70%;
+    height: 662px;
+    float: left;
+    margin-left: 15%;
+    border: 1px solid black;
+    grid-template-columns: repeat(60, 1fr);
+    background-color: var(--secondary-100);
+    margin-top: 0px;
+  }
+
+  .mazeComponent {
+    box-sizing: border-box;
+    height: 22px;
+    width: 100%;
+    background-color: var(--secondary-100);
+    font-size: small;
+  }
+
+  /* .mazeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    float: left;
+    font-size: 80%;
+    margin: 0.5%;
+    margin-top: 0px;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  } */
+  .mazeButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+    padding-top: 1%;
+  }
+
+  /* .mazeButton:first-of-type {
+    margin-left: 0.5%;
+    margin-top: -20px;
+  } */
+
+  /* .mazeButton:hover {
+        border: 1px solid var(--primary-600);
+        background-color: var(--secondary-100);
+      } */
+
+  /* .solveButton {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    margin-top: 10px;
+    top: 30px;
+    right: 138px;
+    margin-left: 0.5%;
+    font-size: 80%;
+    width: 120px;
+    float: left;
+    padding: 1%;
+  } */
+  .solveButton {
+    font-size: 100%;
+    width: 120px;
+    padding: 1%;
+  }
+
+  .btnContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    /* background-color: white; */
+    margin-top: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }  
+
+  /* .mazeTutorial {
+    font-size: small;
+    max-width: 50%;
+    margin-top: 10px;
+    clear: left;
+    margin-left: 15%;
+    width: 65%;
+  } */
+
+  .mazeTutorial {
+    font-size: medium;
+    clear: left;
+    width: 70%;
+  }
+
+  .textContainer {
+    margin-left: 15%;
+  }
+
+  .mazeLegend {
+    width: 70%;
+    padding-bottom: 5px;
+  }
+
+}

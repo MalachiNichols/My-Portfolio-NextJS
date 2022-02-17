@@ -1,0 +1,122 @@
+.image {
+  width: 90%;
+  max-width: 424px;
+  max-height: 424px;
+  position: relative;
+  justify-content: center;
+  margin-left: 5%;
+  margin-top: 10px;
+  height: width;
+}
+
+.btnback {
+    display: flex;
+    margin: auto;
+  /* position: absolute; */
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: fit-content;
+  height: 50px;
+  line-height: 70px;
+  width: 110px;
+  align-items: center;
+  text-align: right;
+  font-size: auto;
+  font-weight: bold;
+  justify-content: center;
+  color: white;
+  padding: 8px;
+  /* margin-left: 50%; */
+  border-radius: 6px;
+  /* border: solid 1px black; */
+  background-color: var(--secondary-400);
+  cursor: pointer;
+  }
+
+  .goBack {
+    text-decoration: none;
+    color: white;
+    /* background-color: var(--secondary-400); */
+  }
+
+  .icon {
+    position: relative;
+    top: 7.5px;
+    justify-content: center;
+    padding-right: 10px;
+  }
+
+.container {
+    position: relative;
+  align-items: center;
+  padding: 0;
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+}
+
+.names {
+  text-decoration: none;
+  color: black;
+  margin-left: 5%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.name {
+  color: white;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video {
+  display: table;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.drummer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.drummer:hover {
+  background-color: white;
+}
+
+@media screen and (min-width: 910px) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .drummer {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    min-width: 450px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+}
