@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import config from '../src/aws-exports'
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
