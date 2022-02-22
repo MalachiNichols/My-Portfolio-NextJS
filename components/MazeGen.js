@@ -513,6 +513,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
               className="link"
               href="https://www.baeldung.com/cs/maze-generation#:~:text=A%20maze%20where%20every%20point,is%20called%20a%20perfect%20maze."
               target="_blank"
+              rel="noopener noreferrer"
             >
               perfect mazes
             </a>
@@ -523,6 +524,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
               className="link"
               href="https://people.cs.ksu.edu/~ashley78/wiki.ashleycoleman.me/index.php/Hunt_and_Kill_Algorithm.html"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Hunt and Kill
             </a>

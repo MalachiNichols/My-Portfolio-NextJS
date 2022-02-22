@@ -1,4 +1,3 @@
-
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -13,7 +12,7 @@ const portfolio = ({posts}) => {
       </Head>
       <div>
         {posts.map((post, index) => (
-          <Post post={post}/>
+          <Post post={post} key={post}/>
         ))}
       </div>
     </div>
@@ -41,7 +40,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts
+      posts: posts,
     }
   }
 }
