@@ -8,7 +8,7 @@ const change = () => {
 
   return (
     <div className={navStyles.navList}>
-      <Link href="/"><p className={navStyles.navLinks} onClick={() => change()}>Malachi Nichols</p></Link>
+      {/* <Link href="/"><p className={navStyles.navLinks} onClick={() => change()}>Malachi Nichols</p></Link> */}
       <Link href="/about"><p className={navStyles.navLinks} onClick={() => change()}>About</p></Link>
       <Link href="/portfolio"><p className={navStyles.navLinks} onClick={() => change()}>Portfolio</p></Link>
       <Link href="/maze"><p className={navStyles.navLinks} onClick={() => change()}>Maze</p></Link>

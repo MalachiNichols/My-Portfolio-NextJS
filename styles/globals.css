@@ -36,9 +36,9 @@ body {
   margin-right: auto;
   margin-top: 10%;
   width: 20%;
-  min-width: 400px; 
+  min-width: 300px; 
   height: fit-content;
-  font-size: 80px;
+  font-size: 60px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
