@@ -21,7 +21,7 @@ export default function about () {
       <br/>
       In my free time, I like to learn instruments and write music. I have been playing the drums for
       a long time, but I love the challenge of perfecting a new craft. I am always picking up new
-      hobbies that I find engaging like speed-solving Rubik's cubes, rock climbing, and jiu jitsu.
+      hobbies that I find engaging like speed-solving Rubiks cubes, rock climbing, and jiu jitsu.
     </p>
   </div>
 </div>;
