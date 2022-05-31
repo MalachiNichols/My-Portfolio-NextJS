@@ -44,7 +44,7 @@ const Drummer = ({ drummer }) => {
       <div className={style.btnback}>
         <Link href="/myfavoritedrummers">
           <a className={style.goBack}>
-            <FaArrowLeft className={style.icon} color="white" size="28px" />
+            <FaArrowLeft className={style.icon} color="black" size="28px" />
             Go Back
           </a>
         </Link>

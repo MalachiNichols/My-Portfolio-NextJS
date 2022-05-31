@@ -10,8 +10,8 @@
 }
 
 .btnback {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
   /* position: absolute; */
   left:0;
   right: 0;
@@ -31,13 +31,13 @@
   /* margin-left: 50%; */
   border-radius: 6px;
   /* border: solid 1px black; */
-  background-color: var(--secondary-400);
+  background-color: #EDDFEF;
   cursor: pointer;
   }
 
   .goBack {
     text-decoration: none;
-    color: white;
+    color: black;
     /* background-color: var(--secondary-400); */
   }
 
@@ -68,7 +68,7 @@
 }
 
 .name {
-  color: white;
+  color: #EDDFEF;
   display: table;
   margin-left: auto;
   margin-right: auto;

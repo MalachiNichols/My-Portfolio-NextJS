@@ -6,11 +6,11 @@ import style from "../styles/Maze.module.css";
 /* Goals:
     make some DB to save your mazes/solutions and use API to do so
 */
-const green = "#F4D78E";
-const red = "#b53737";
-const pink = "#57b97b";
-const lightblue = "#636B70";
-const white = "#FFFFFF";
+const green = "#09B846";
+const red = "#b91929";
+const pink = "#E2C044";
+const lightblue = "#6B818C";
+const white = "#EDDFEF";
 
 // allocate grid
 let gridItems = [

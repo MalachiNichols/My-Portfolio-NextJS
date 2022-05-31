@@ -5,7 +5,7 @@
     position: fixed;
     z-index: 5;
     background: black;
-    color: #fff;
+    color: #EDDFEF;
     text-decoration: none;
   }
 
@@ -17,7 +17,7 @@
     position: fixed;
     z-index: 5;
     background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: #EDDFEF;
     text-decoration: none;
   }
 
