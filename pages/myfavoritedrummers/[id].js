@@ -34,6 +34,7 @@ export async function getStaticPaths() {
 }
 
 const Drummer = ({ drummer }) => {
+
   return (
     <div className={style.container}>
       <div className={style.btnback}>
@@ -45,7 +46,7 @@ const Drummer = ({ drummer }) => {
         </Link>
       </div>
       <h1 className={style.name}>{drummer.name}</h1>
-      <YouTube videoId={drummer.uri} opts={opts} className={style.video} />
+      <YouTube videoId={drummer.uri} className={style.video} />
     </div>
   );
 };
