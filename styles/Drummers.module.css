@@ -12,7 +12,6 @@
 .btnback {
   display: flex;
   margin: auto;
-  /* position: absolute; */
   left:0;
   right: 0;
   top: 0;
@@ -28,9 +27,7 @@
   justify-content: center;
   color: white;
   padding: 8px;
-  /* margin-left: 50%; */
   border-radius: 6px;
-  /* border: solid 1px black; */
   background-color: #EDDFEF;
   cursor: pointer;
   }
@@ -38,7 +35,6 @@
   .goBack {
     text-decoration: none;
     color: black;
-    /* background-color: var(--secondary-400); */
   }
 
   .icon {
@@ -52,7 +48,6 @@
     position: relative;
   align-items: center;
   padding: 0;
-  /* background-color: white; */
   width: 100%;
   height: 100%;
 }

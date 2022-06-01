@@ -34,11 +34,6 @@ export async function getStaticPaths() {
 }
 
 const Drummer = ({ drummer }) => {
-  const opts = {
-    // height: '390',
-    // width: '640',
-  };
-
   return (
     <div className={style.container}>
       <div className={style.btnback}>
@@ -50,7 +45,6 @@ const Drummer = ({ drummer }) => {
         </Link>
       </div>
       <h1 className={style.name}>{drummer.name}</h1>
-      {/*add some youtube interface here*/}
       <YouTube videoId={drummer.uri} opts={opts} className={style.video} />
     </div>
   );

@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import _ from "lodash";
 import style from "../styles/Maze.module.css";
 
-/* Goals:
-    make some DB to save your mazes/solutions and use API to do so
+/* 
+   This file creates and solves mazes. 
 */
 const green = "#09B846";
 const red = "#b91929";
@@ -64,7 +64,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         randomOf4 === 0 &&
         !visitedList.has(currentCell.id - 60)
       ) {
-        //remove borders between two cells and update visit list and current cell
+        //remove borders between two cells and updates visit list and current cell
         gridItems[currentCell.id].gridStyleTop = { borderTop: 0 };
         gridItems[currentCell.id - 60].gridStyleBottom = { borderBottom: 0 };
         currentCell = gridItems[currentCell.id - 60];
@@ -75,7 +75,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         randomOf4 === 1 &&
         !visitedList.has(currentCell.id + 60)
       ) {
-        //remove borders between two cells and update visit list and current cell
+        //remove borders between two cells and updates visit list and current cell
         gridItems[currentCell.id].gridStyleBottom = { borderBottom: 0 };
         gridItems[currentCell.id + 60].gridStyleTop = { borderTop: 0 };
         currentCell = gridItems[currentCell.id + 60];
@@ -86,7 +86,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         randomOf4 === 2 &&
         !visitedList.has(currentCell.id - 1)
       ) {
-        //remove borders between two cells and update visit list and current cell
+        //remove borders between two cells and updates visit list and current cell
         gridItems[currentCell.id].gridStyleLeft = { borderLeft: 0 };
         gridItems[currentCell.id - 1].gridStyleRight = { borderRight: 0 };
         currentCell = gridItems[currentCell.id - 1];
@@ -97,7 +97,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         randomOf4 === 3 &&
         !visitedList.has(currentCell.id + 1)
       ) {
-        //remove borders between two cells and update visit list and current cell
+        //remove borders between two cells and updates visit list and current cell
         gridItems[currentCell.id].gridStyleRight = { borderRight: 0 };
         gridItems[currentCell.id + 1].gridStyleLeft = { borderLeft: 0 };
         currentCell = gridItems[currentCell.id + 1];
@@ -110,7 +110,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
     }
   };
 
-  // create the maze
+  // create the maze template
   if (!hasRun) {
     for (let i = 0; i < 1800; i++) {
       gridItems[i] = {
@@ -196,22 +196,19 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
   // solve the maze
   const [display, setDisplay] = useState(gridItems);
   const depthSearch = (index, endPoint) => {
-    // if you can go up -> go up and try again
-    // if you can go (...) -> go (...) and try again
-    // if cant go anywhere -> return until you can
-    // if you are at the end -> return that youre at the end until you hit the first call
-    // color everything you encounter lightblue
-    // upon finding the end color cells pink on the way back
+    /*  
+        if you can go up -> go up and try again
+        if you can go (...) -> go (...) and try again
+        if cant go anywhere -> return until you can
+        if you are at the end -> return that youre at the end until you hit the first call
+        color every visited cell as you go
+        upon finding the end, color the solution path on the way back to the beginning
+    */
 
     //are you at the end?
     if (index === endPoint) {
       return true;
     } // can you go right?
-
-    // set some var based on whether the endpoint > startpoint + 60x ,
-    // end of startpoint row < endpoint < startpoint + 60x, endpoint = startpoint + 60x,
-    // enpoint < startpoint - 60x, startpoint - 60x < endpoint < end or endpoint row
-
     if (
       _.isEqual(gridItems[index].gridStyleRight, { borderRight: 0 }) &&
       _.isEqual(
@@ -244,7 +241,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         gridItems[index].background = { backgroundColor: pink };
         return true;
       }
-    } // can you go up
+    } // can you go up?
     if (
       (_.isEqual(gridItems[index].gridStyleTop, { borderTop: 0 }) &&
         _.isEqual(gridItems[index - 60].background, {
@@ -288,16 +285,8 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
     let index = 0;
     console.log("click");
     const interval = setInterval(() => {
+      //draw in the maze in random chunks of 16 borders at a time using the random array generated at the top of the file
       gridItems = gridItems.map((i) =>
-        // i.id === index ||
-        // i.id === index + 900 ||
-        // i.id === index + 450 ||
-        // i.id === index + 1350 ||
-        // i.id === index + 225 ||
-        // i.id === index + 1125 ||
-        // i.id === index + 675 ||
-        // i.id === index + 1575
-        //   ?
         i.id === arrOfInts[index] ||
         i.id === arrOfInts[index + 1] ||
         i.id === arrOfInts[index + 2] ||
@@ -337,9 +326,11 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
   // solve the maze and then display the solution
   const displaySolve = (begin, stop) => {
     setButton3Disabled(true);
+    // reset background colors for new solution
     for (let i = 0; i < 1800; i++) {
       gridItems[i].background = { backgroundColor: white };
     }
+    // set default start and endpoints
     if (stop === "false") {
       stop = 1799;
       setEnd(1799);
@@ -348,6 +339,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
       begin = 0;
       setStart(0);
     }
+
     depthSearch(begin, stop);
     gridItems[begin].background = { backgroundColor: green };
     gridItems[stop].background = { backgroundColor: red };
@@ -371,6 +363,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
 
   // update start and endpoints
   const changeStart = (key) => {
+    // if selected start and endpoint are on the same cell, clear the cell
     if (start !== "false" && start === end) {
       gridItems[key].background = { backgroundColor: white };
       let temp = gridItems.slice();
@@ -378,6 +371,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
       setStart("false");
       setEnd("false");
     }
+    // if start and endpoint are selected, and user clicks either cell, clear that cell
     if (start !== "false" && end !== "false") {
       if (_.isEqual(gridItems[key].background, { backgroundColor: green })) {
         gridItems[key].background = { backgroundColor: white };
@@ -394,6 +388,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
       setButton3Disabled(false);
       return;
     }
+    // if start is set and end is not, clear start cell if clicked, and set end to any other cell that is clicked
     if (start !== "false" && end === "false") {
       if (_.isEqual(gridItems[key].background, { backgroundColor: green })) {
         gridItems[key].background = { backgroundColor: white };
@@ -407,6 +402,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         setEnd(key);
       }
     }
+    // if end is set and start is not, clear end cell if clicked, and set start to any other cell that is clicked
     if (end !== "false" && start === "false") {
       if (_.isEqual(gridItems[key].background, { backgroundColor: red })) {
         gridItems[key].background = { backgroundColor: white };
@@ -422,6 +418,7 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
         setStart(key);
       }
     }
+    // if start is not set, set and clicked cell to start
     if (start === "false") {
       gridItems[key].background = { backgroundColor: green };
       let temp = gridItems.slice();
@@ -448,27 +445,17 @@ const MazeGen = ({ newMaze, counter, hasRun, hasRan }) => {
           />
         ))}
       </div>
-      {/* <button
-        className={style.mazeButton}
-        onClick={() => changeVis()}
-        disabled={buttonDisabled}
-      >
-        Generate Maze
-      </button> */}
       <br />
       <div className={style.btnContainer}>
         <button
           className={style.mazeButton}
-          // id={style.newBtn}
           onClick={() => updateMaze()}
           disabled={button2Disabled}
         >
           Generate Maze
         </button>
-        {/* <br /> */}
         <button
           className={style.solveButton}
-          // style={solveVis}
           onClick={() => displaySolve(start, end)}
           disabled={button3Disabled}
         >

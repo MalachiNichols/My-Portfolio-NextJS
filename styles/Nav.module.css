@@ -22,7 +22,6 @@
   }
 
   .navLinks {
-    /* float: left; */
     max-height: 30px;
     width: fit-content;
     cursor: pointer;
