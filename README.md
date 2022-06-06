@@ -1,20 +1,16 @@
-notes: 
+# README
+Welcome, 
 
-weird link behavior in openshot markdown, might work in actual build
+This is the repository for my portfolio website. The application was originally prototyped in react, but I migrated the project to nextjs. The backend for this project includes a postgresql database that I connected to the server through prisma. I opted to use, almost exclusively, external CSS styling, so that I could practice and get more comfortable with CSS. The website is hosted through Vercel.
 
-consider adding alert to mazegen 
+Overall, the website includes:
+* An about me page to give a brief introduction of my experience and interests
+* A markdown blog with some technical writing examples that I created
+* A maze generator and solver application with instructions
+* A list of some of my favorite drummers with embedded videos 
 
-add headers for diff posts and all pages
+Please feel free to check out the website [here](https://my-portfolio-next-js-seven.vercel.app/).
 
-make welcome splash page when click on me
-also make it first page of website
+You can contact me with any questions at malachizachary@gmail.com
 
-change authenticator so no one can make an acct
-
-different export methods 
-
-"const functionName = ({ param }) => (
-    how does this work with parenthesis instead of {} as function wrapper????
-);
-
-pgbouncer???
+Thanks for visiting! 
